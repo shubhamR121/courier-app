@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'reports/index'
+  devise_for :users
   resources :service_types
   resources :parcels
   resources :addresses

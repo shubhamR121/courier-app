@@ -1,0 +1,11 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "User") do |sheet|
+  @users.each do |user|
+    sheet.add_row [user.name, user.email]
+  end
+
+  @parcels.each do |parcel|
+    sheet.add_row [parcel.weight, parcel.status]
+  end
+end
+
